@@ -13,6 +13,8 @@ As written everywhere about PID regulators, "P" term affects how fast the contro
 I hand tuned the parameters, using very basic technique, found on the [stackoverflow](https://robotics.stackexchange.com/questions/167/what-are-good-strategies-for-tuning-pid-loops). I started from Kd and Ki set to zero, and cranked up the Kp until it started to be unstable on the starting straight line.
 Then I damped the oscillations with the Kd term. And finally I started gradually increase the Ki from 0.00001 to 0.01. The latter value showed very good results in long turns. You can see some commented PID initializations, which I saved when the car was able to finish at least 1 lap.
 
+You could always slow down the throttle, if you think it drives too close to the edge. I even found PID coefficients that kinda work on full throttle, but it always failed when I started filming it :)
+
 ## Dependencies
 
 * cmake >= 3.5
