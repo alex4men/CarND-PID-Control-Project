@@ -10,7 +10,7 @@ This is my best run on 3x speed. It uses Kp = 0.167, Ki = 0.01 and Kd = 45. Thro
 
 As written everywhere about PID regulators, "P" term affects how fast the control signal rises, "D" prevents overshooting and damps oscillations (unless Kd is too high), and "I" helps with systematic bias, like on the turns (but could wind up if the Ki is too high).
 
-I hand tuned the parameters, using very basic technique, found on the [stackoverflow](https://robotics.stackexchange.com/questions/167/what-are-good-strategies-for-tuning-pid-loops). I started from Kd and Ki set to zero, and cranked up the Kp until it started to be unstable (near 0.2) on the starting straight line.
+I hand tuned the parameters, using very basic technique, found on the [stackexchange](https://robotics.stackexchange.com/questions/167/what-are-good-strategies-for-tuning-pid-loops). I started from Kd and Ki set to zero, and cranked up the Kp until it started to be unstable (near 0.2) on the starting straight line.
 Then I damped the oscillations with the Kd term (about 30-45) and lowered the Kp to about 0.167. Then finally I started to gradually increase the Ki from 0.00001 to 0.01. The latter value showed very good results in long turns.
 
 You can see some commented PID initializations, which I saved when the car was able to finish at least 1 lap. You could always slow down the throttle, if you think it drives too close to the edge. I even found PID coefficients that kinda work on full throttle, but it always failed when I started filming it :)
