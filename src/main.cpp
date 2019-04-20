@@ -40,7 +40,7 @@ int main() {
    */
 //  pid.Init(0.1, 0, 0.6); // finishes loop with 20mph
 //  pid.Init(0.2, 0, 1.8|2|3); // finishes loop with 30mph
-//  pid.Init(0.167, 0.000[0]1, 38); // runs at least for 1 lap at 70mph
+//  pid.Init(0.167, 0.00001, 38); // runs at least for 1 lap at 70mph (full throttle)
   // pid.Init(0.167, 0.001, 45); // runs at 0.6
   pid.Init(0.167, 0.01, 45);
 
